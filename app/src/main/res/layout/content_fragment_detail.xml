@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:showIn="@layout/fragment_detail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            style="@style/AppTheme.Text.Heading2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorAccent"
+            app:layout_constraintEnd_toStartOf="@id/ratingbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="KKFC Civil Mall" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/address"
+            style="@style/AppTheme.Text.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp"
+            android:alpha="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="Civil Mall, Kathmandu" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/colorPrimaryDark"
+            app:chipIcon="@drawable/ic_location_on_black_24dp"
+            app:chipIconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/address"
+            tools:text="40 M" />
+
+        <com.xw.repo.VectorCompatTextView
+            android:id="@+id/contact"
+            style="@style/AppTheme.Text.Regular.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space2x"
+            android:alpha="1"
+            android:autoLink="phone"
+            android:drawablePadding="@dimen/four_dp"
+            app:drawableCompatColor="?attr/colorPrimaryDark"
+            app:drawableLeftCompat="@drawable/ic_local_phone_black_24dp"
+            app:layout_constraintTop_toBottomOf="@+id/distance"
+            tools:text="01-499009" />
+
+        <com.xw.repo.VectorCompatTextView
+            android:id="@+id/website"
+            style="@style/AppTheme.Text.Regular.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space"
+            android:autoLink="web"
+            android:drawablePadding="@dimen/four_dp"
+            app:drawableCompatColor="?attr/colorPrimaryDark"
+            app:drawableLeftCompat="@drawable/ic_public_black_24dp"
+            app:layout_constraintTop_toBottomOf="@+id/contact"
+            tools:text="www.kkfcnepal.com" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/space"
+        android:background="@color/divider" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/discount_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="@dimen/space"
+        app:cardElevation="@dimen/two_dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/AppTheme.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    android:text="@string/title_discount"
+                    android:textColor="@color/white"
+                    tools:text="Discount" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/four_dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/discount_tag"
+                    android:layout_width="@dimen/space3x"
+                    android:layout_height="@dimen/space3x"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_tag_black"
+                    app:tint="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discount_title"
+                    style="@style/AppTheme.Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    app:layout_constraintStart_toEndOf="@id/discount_tag"
+                    tools:text="25% OFF" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discount_desc"
+                    style="@style/AppTheme.Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/four_dp"
+                    app:layout_constraintStart_toStartOf="@id/discount_title"
+                    app:layout_constraintTop_toBottomOf="@id/discount_title"
+                    tools:text="Only valid at Civil all branch, till 11th October, 2018" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/offer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:selectableItemBackground"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="@dimen/space"
+        app:cardElevation="@dimen/two_dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/AppTheme.Text.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    android:text="@string/title_offer"
+                    android:textColor="@color/white"
+                    tools:text="Offer" />
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/four_dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/offer_tag"
+                    android:layout_width="@dimen/space3x"
+                    android:layout_height="@dimen/space3x"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_tag_black"
+                    app:tint="@color/colorAccent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/offer_title"
+                    style="@style/AppTheme.Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space"
+                    app:layout_constraintStart_toEndOf="@id/offer_tag"
+                    tools:text="Rs 100 OFF" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/offer_desc"
+                    style="@style/AppTheme.Text.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/four_dp"
+                    app:layout_constraintStart_toStartOf="@id/offer_title"
+                    app:layout_constraintTop_toBottomOf="@id/offer_title"
+                    tools:text="Minimum purchase of Rs. 1000" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/AppTheme.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:text="@string/title_opening_hours"
+        tools:text="Opening Hours" />
+
+    <include layout="@layout/view_highlight_1" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@+id/highlight_1">
+
+        <!--Row 0-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_sunday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/sunday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+
+        <!--Row 1-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_monday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/monday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+
+        <!--Row 2-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_tuesday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tuesday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+        <!--Row 3-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_wednesday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wednesday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+
+        <!--Row 4-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_thursday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/thursday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+
+        <!--Row 5-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_friday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/friday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="9 AM to 6 10 PM" />
+
+        <!--Row 6-->
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_saturday" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/saturday"
+            style="@style/AppTheme.Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Closed" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/space"
+        android:background="@color/divider" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/AppTheme.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:text="@string/title_description" />
+
+    <include layout="@layout/view_highlight_1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/description"
+        style="@style/AppTheme.Text.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        tools:text="@string/dummy_description" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/AppTheme.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:text="@string/title_review" />
+
+    <include layout="@layout/view_highlight_1" />
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_progress="@layout/view_review_empty"
+        tools:listitem="@layout/item_review">
+
+    </com.jude.easyrecyclerview.EasyRecyclerView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/review_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space"
+        android:text="@string/value_post_review" />
+
+</LinearLayout>

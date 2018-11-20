@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * All Rights Reserved.
+  ~  * Created by Suzn on 2018.
+  ~  * suzanparajuli@gmail.com
+  ~  */
+  -->
+
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/teal" />
+            <corners android:radius="@dimen/space4x" />
+        </shape>
+    </item>
+</ripple>

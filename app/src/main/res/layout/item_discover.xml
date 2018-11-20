@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/space">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/avatar_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/avatar"
+                android:layout_width="@dimen/space7x"
+                android:layout_height="@dimen/space7x"
+                app:srcCompat="@drawable/ic_person_black_24dp"
+                app:tint="@color/gray" />
+
+            <ProgressBar
+                android:id="@+id/avatar_progress"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_container" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/AppTheme.Text.Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ratingbar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Phoolbari Restaurant and Bar Phoolbari Restaurant and Bar" />
+
+        <com.xw.repo.VectorCompatTextView
+            android:id="@+id/address"
+            style="@style/AppTheme.Text.Regular.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp"
+            android:layout_marginEnd="@dimen/space"
+            android:alpha="0.7"
+            android:maxLines="3"
+            app:drawableLeftCompat="@drawable/ic_location_on_black_24dp"
+            app:layout_constraintEnd_toStartOf="@+id/distance"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="Pepsicola, Kathmandu 4480" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:chipBackgroundColor="@color/colorAccent"
+            app:chipIcon="@drawable/ic_location_on_black_24dp"
+            app:chipIconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="40 M" />
+
+        <HorizontalScrollView
+            android:id="@+id/chipgroup_scroll_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp"
+            app:layout_constraintEnd_toStartOf="@+id/phone_icon"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@id/address">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipgroup"
+                style="@style/Widget.MaterialComponents.ChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space">
+
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/phone_icon"
+            android:layout_width="@dimen/space3x"
+            android:layout_height="@dimen/space3x"
+            app:layout_constraintBottom_toBottomOf="@id/chipgroup_scroll_container"
+            app:layout_constraintEnd_toStartOf="@+id/website_icon"
+            app:layout_constraintStart_toEndOf="@+id/chipgroup_scroll_container"
+            app:layout_constraintTop_toTopOf="@id/chipgroup_scroll_container"
+            app:srcCompat="@drawable/ic_local_phone_black_24dp"
+            app:tint="?attr/colorPrimaryDark" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/website_icon"
+            android:layout_width="@dimen/space3x"
+            android:layout_height="@dimen/space3x"
+            android:layout_marginStart="@dimen/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/phone_icon"
+            app:layout_constraintTop_toTopOf="@id/phone_icon"
+            app:srcCompat="@drawable/ic_public_black_24dp"
+            app:tint="?attr/colorAccent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

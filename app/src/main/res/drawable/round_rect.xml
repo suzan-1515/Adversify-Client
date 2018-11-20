@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * All Rights Reserved.
+  ~  * Created by Suzn on 2018.
+  ~  * suzanparajuli@gmail.com
+  ~  */
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/floral_white" />
+    <corners android:radius="@dimen/space2x" />
+</shape>

@@ -1,0 +1,162 @@
+<!--
+  ~ /**
+  ~  * All Rights Reserved.
+  ~  * Created by Suzn on 2018.
+  ~  * suzanparajuli@gmail.com
+  ~  */
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryText</item>
+        <item name="android:textColorSecondary">@color/colorSecondaryText</item>
+    </style>
+
+    <style name="TextAppearance.Regular" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/product-sans/ProductSans-Regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Bold" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/product-sans/ProductSans-Bold.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Italic" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/product-sans/ProductSans-Italic.ttf</item>
+    </style>
+
+    <style name="TextAppearance.BoldItalic" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">fonts/product-sans/ProductSans-BoldItalic.ttf</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="AppTheme.Button.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="AppTheme.Text" parent="TextAppearance.AppCompat">
+        <item name="android:textAppearance">@style/TextAppearance.Regular</item>
+    </style>
+
+    <style name="AppTheme.PrimaryButton" parent="AppTheme.Button">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:background">@drawable/button_round</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.SecondaryButton" parent="AppTheme.Button">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:background">@drawable/button_round</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.LiteButton" parent="AppTheme.Button">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:background">@drawable/button_round_light_grey_border</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="AppTheme.AccentButton" parent="AppTheme.Button">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:background">@drawable/button_round</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.Button.Option" parent="AppTheme.PrimaryButton">
+        <item name="android:layout_marginTop">@dimen/space2x</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Heading1" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_26sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Text.Heading1.Light" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_26sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.Text.Heading2" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_22sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Heading2.Light" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_22sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Title" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Title.Light" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Regular" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Regular.Light" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Regular.Small" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Regular.Small.Light" parent="AppTheme.Text">
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.Text.Body" parent="AppTheme.Text">
+        <item name="android:textColor">@color/text_header_secondary</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="AppTheme.Chip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/space3x</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="chipBackgroundColor">@color/green</item>
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/dark_gray</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

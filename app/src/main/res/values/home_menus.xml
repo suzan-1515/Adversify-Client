@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="item_2">
+        <item>Bars</item>
+        <item>@drawable/bar</item>
+        <item>BARS</item>
+    </array>
+    <array name="item_3">
+        <item>Coffee Shop</item>
+        <item>@drawable/bakery</item>
+        <item>COFFEE_SHOPS</item>
+    </array>
+    <array name="item_4">
+        <item>Restaurant</item>
+        <item>@drawable/restaurant</item>
+        <item>RESTAURANTS</item>
+    </array>
+    <array name="item_5">
+        <item>Hotels</item>
+        <item>@drawable/lodging</item>
+        <item>HOTELS</item>
+    </array>
+    <array name="item_6">
+        <item>Movie Theater</item>
+        <item>@drawable/movietheater</item>
+        <item>MOVIE_THEATERS</item>
+    </array>
+    <array name="item_7">
+        <item>Pharmacies</item>
+        <item>@drawable/pharmacy</item>
+        <item>PHARMACIES</item>
+    </array>
+    <array name="item_8">
+        <item>Electronic Store</item>
+        <item>@drawable/electronicstore</item>
+        <item>ELECTRONIC_STORES</item>
+    </array>
+    <array name="item_9">
+        <item>Clothing Store</item>
+        <item>@drawable/clothing_store</item>
+        <item>CLOTHING_STORES</item>
+    </array>
+    <array name="item_10">
+        <item>Beauty Salon</item>
+        <item>@drawable/beautysalon</item>
+        <item>BEAUTY_SALON</item>
+    </array>
+    <array name="item_11">
+        <item>Bakery</item>
+        <item>@drawable/bakery</item>
+        <item>BAKERY</item>
+    </array>
+    <array name="item_12">
+        <item>Shopping Mall</item>
+        <item>@drawable/shoppingmall</item>
+        <item>SHOPPING_MALL</item>
+    </array>
+    <array name="item_13">
+        <item>Department Store</item>
+        <item>@drawable/departmentstore</item>
+        <item>DEPARTMENT_STORE</item>
+    </array>
+
+    <array name="home_menus">
+        <item>@array/item_2</item>
+        <item>@array/item_3</item>
+        <item>@array/item_4</item>
+        <item>@array/item_5</item>
+        <item>@array/item_6</item>
+        <item>@array/item_7</item>
+        <item>@array/item_8</item>
+        <item>@array/item_9</item>
+        <item>@array/item_10</item>
+        <item>@array/item_11</item>
+        <item>@array/item_12</item>
+        <item>@array/item_13</item>
+    </array>
+
+</resources>

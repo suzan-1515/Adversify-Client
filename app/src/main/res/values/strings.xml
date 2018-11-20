@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Adversify-Client</string>
+    <string name="p2pkit_key">4e1b9ed2989e4fe887ef4d040afbe1f9</string>
+    <string name="nearby_key">AIzaSyCXR5h5eHL4rMVPxoFczZkDRfWFN4IkXvo</string>
+    <string name="auth_key">644417095831-b2di845a4leplrcc1acueuh47ckoq44l.apps.googleusercontent.com</string>
+
+    <string name="value_empty">Empty Data</string>
+    <string name="value_merchant_discovered_with_info">Merchant discovered: %s</string>
+    <string name="value_searching">Searching…</string>
+    <string name="value_error_discovering">Error occurred while discovering</string>
+    <string name="value_connection_request_sent">Connection request sent successfully</string>
+
+    <string name="title_discount">Discount</string>
+    <string name="title_offer">Offer</string>
+    <string name="title_opening_hours">Opening Hours</string>
+    <string name="title_sunday">Sunday</string>
+    <string name="title_monday">Monday</string>
+    <string name="title_tuesday">Tuesday</string>
+    <string name="title_wednesday">Wednesday</string>
+    <string name="title_thursday">Thursday</string>
+    <string name="title_friday">Friday</string>
+    <string name="title_saturday">Saturday</string>
+    <string name="title_description">Description</string>
+    <string name="dummy_description">\'KKFC The First Robot Restaurant in Nepal. KKFC is the very first of its kind fast food restaurant that started in Nepal since 2017. A true Nepali brand with a vision to provide highest quality food at affordable rate. KKFC is also known as the first restaurant to provide ROBOT service in Nepal. KKFC is the most advanced fast food restaurant in Nepal and expanding.... “ A Place where Food meets Technology. “</string>
+    <string name="title_review">Reviews</string>
+    <string name="value_post_review">Post Review</string>
+    <string name="title_show_more_reviews">Show more reviews</string>
+    <string name="title_empty_reviews">No reviews available</string>
+    <string name="distance_surfix">%d M</string>
+    <string name="hint_write_a_review">Write a review..</string>
+    <string name="value_cancel">Cancel</string>
+    <string name="value_post">Post</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_display_name">Display name</string>
+    <string name="value_next">Next</string>
+    <string name="title_profile">Profile</string>
+    <string name="value_update">Update</string>
+    <string name="title_display_name">Display Name</string>
+</resources>

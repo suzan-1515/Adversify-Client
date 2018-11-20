@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.profile.ProfileSetupFragment">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/avatar"
+                android:layout_width="@dimen/image"
+                android:layout_height="@dimen/image"
+                android:layout_marginTop="@dimen/space"
+                app:civ_border_color="@color/gray"
+                app:civ_border_width="@dimen/two_dp"
+                app:srcCompat="@drawable/default_avatar" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/avatar_icon"
+                android:layout_width="@dimen/space4x"
+                android:layout_height="@dimen/space4x"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_camera_alt_black_24dp"
+                app:tint="@color/dark_gray" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/AppTheme.Text.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/space4x"
+            android:text="@string/title_display_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space2x"
+            android:layout_marginTop="@dimen/space3x"
+            android:layout_marginEnd="@dimen/space2x">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="@string/hint_display_name" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space2x"
+            android:layout_marginTop="@dimen/space2x"
+            android:layout_marginEnd="@dimen/space2x"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:text="@string/value_update" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</LinearLayout>

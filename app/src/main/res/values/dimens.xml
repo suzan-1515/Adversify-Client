@@ -1,0 +1,50 @@
+<!--
+  ~ /**
+  ~  * All Rights Reserved.
+  ~  * Created by Suzn on 2018.
+  ~  * suzanparajuli@gmail.com
+  ~  */
+  -->
+
+<resources>
+    <!-- DefamScreenreen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">210dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <dimen name="two_dp">2dp</dimen>
+    <dimen name="four_dp">4dp</dimen>
+    <dimen name="space">8dp</dimen>
+    <dimen name="space2x">16dp</dimen>
+    <dimen name="space3x">24dp</dimen>
+    <dimen name="space4x">32dp</dimen>
+    <dimen name="space5x">40dp</dimen>
+    <dimen name="space6x">48dp</dimen>
+    <dimen name="space7x">56dp</dimen>
+    <dimen name="space8x">64dp</dimen>
+    <dimen name="space9x">128dp</dimen>
+    <dimen name="space10x">256dp</dimen>
+
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_22sp">22sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_26sp">26sp</dimen>
+    <dimen name="text_size_28sp">28sp</dimen>
+    <dimen name="text_size_30sp">30sp</dimen>
+    <dimen name="text_size_32sp">32sp</dimen>
+
+    <dimen name="image_medium">60dp</dimen>
+    <dimen name="image">80dp</dimen>
+    <dimen name="image2x">150dp</dimen>
+    <dimen name="image3x">200dp</dimen>
+    <dimen name="image4x">250dp</dimen>
+    <dimen name="image5x">300dp</dimen>
+
+</resources>

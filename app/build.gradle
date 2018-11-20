@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.nepal.adversify"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "DATABASE_NAME", "\"adversify_client.db\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "DATABASE_NAME", "\"adversify_client.db\"")
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    // android support libraries
+    implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.supportLibraryVersion"
+    implementation "androidx.cardview:cardview:$rootProject.supportLibraryVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.vectordrawable:vectordrawable:$rootProject.supportLibraryVersion"
+    implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.supportLibraryVersion"
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.supportLibraryVersion"
+    implementation "androidx.constraintlayout:constraintlayout-solver:$rootProject.constraintVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintVersion"
+
+    implementation "com.google.android.gms:play-services-nearby:$rootProject.nearbyVersion"
+    implementation "com.google.android.gms:play-services-location:$rootProject.locationVersion"
+
+    //RXJava 2
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.lifecycleVersion"
+    //ReactiveStreams support for LiveData
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$rootProject.lifecycleVersion"
+
+    //Room
+    implementation "androidx.room:room-runtime:$rootProject.roomDatabase"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomDatabase"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$rootProject.roomDatabase"
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment:$rootProject.navigationVersion"
+    implementation "android.arch.navigation:navigation-ui:$rootProject.navigationVersion"
+
+    //Dagger 2
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android:$rootProject.dagger2AndroidVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2AndroidVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2AndroidVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+    //Debug database
+    debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
+
+    //Timber
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+    //Multiview adapter
+    implementation "com.github.devahamed:multi-view-adapter:$rootProject.multiviewVersion"
+
+    //EasyRecyclerview
+    implementation "com.jude:easyrecyclerview:$rootProject.easyRecyclerviewVersion"
+
+    //Circular imageview
+    implementation "com.mikhaellopez:circularimageview:$rootProject.circular_imageVersion"
+
+    //Font
+    implementation "io.github.inflationx:calligraphy3:$rootProject.calligraphyVersion"
+    implementation "io.github.inflationx:viewpump:$rootProject.viewpumpVersion"
+
+    //Vectorcompat textview
+    implementation "com.github.woxingxiao:VectorCompatTextView:$rootProject.vectorcompatTextviewVersion"
+
+    //ViewAnimator
+    implementation "com.github.florent37:viewanimator:$rootProject.viewAnimator_version"
+
+    //Dexter
+    implementation "com.karumi:dexter:$rootProject.dexterVersion"
+    //Lottie
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "androidx.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    implementation project(path: ':appbase')
+}
