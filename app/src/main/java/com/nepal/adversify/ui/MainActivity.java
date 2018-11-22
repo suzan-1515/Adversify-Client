@@ -18,7 +18,6 @@ public class MainActivity extends BaseActivity {
     protected void onViewReady(Bundle savedInstanceState, Intent intent) {
         super.onViewReady(savedInstanceState, intent);
         Timber.d("onViewReady");
-
     }
 
     @Override

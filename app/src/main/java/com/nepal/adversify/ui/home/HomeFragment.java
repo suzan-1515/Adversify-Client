@@ -109,7 +109,13 @@ public class HomeFragment extends BaseFragment implements OnItemClickCallback<Me
 
         if (mPrefs.isHomeFirstLoad()) {
             Timber.d("Home first load");
-            Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_profileSetupFragment);
+            try {
+
+
+                Navigation.findNavController(view).navigate(R.id.action_homeFragment_to_profileSetupFragment);
+            } catch (Exception e) {
+                System.exit(0);
+            }
             return view;
         }
 

@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.3.0-beta04'
         
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -46,8 +46,8 @@ ext {
     locationVersion = '16.0.0'
     gmailAuthVersion = '16.0.1'
 
-    dagger2Version = '2.15'
-    dagger2AndroidVersion = '2.15'
+    dagger2Version = '2.19'
+    dagger2AndroidVersion = '2.19'
     rxjava2Version = '2.1.9'
     rxandroidVersion = '2.0.2'
     lifecycleVersion = '2.0.0'

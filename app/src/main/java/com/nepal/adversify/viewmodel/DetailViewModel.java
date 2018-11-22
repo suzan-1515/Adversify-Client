@@ -8,6 +8,7 @@ import com.generic.appbase.ui.BaseViewModel;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
+import timber.log.Timber;
 
 public final class DetailViewModel extends BaseViewModel {
 
@@ -59,10 +60,11 @@ public final class DetailViewModel extends BaseViewModel {
     }
 
     public void updateDetailInfoImage(PreviewMerchantInfo previewMerchantInfo) {
-        DetailMerchantInfo value = getMerchantDetailInfo().getValue();
-        if (value != null) {
-            value.previewImage = previewMerchantInfo.previewImage;
-            getMerchantDetailInfo().setValue(value);
+        PreviewMerchantInfo value2 = getMerchantPreviewInfo().getValue();
+        if (value2 != null) {
+            Timber.d("updating image");
+            value2.previewImage = previewMerchantInfo.previewImage;
+            getMerchantPreviewInfo().setValue(value2);
         }
     }
 }
